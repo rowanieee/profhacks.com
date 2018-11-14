@@ -1,17 +1,26 @@
-include header
-body
-  section.register
-    form#register
-      .row
-        .col-md-6
-          label First Name
-          input.form-control#fname(type='text', name='text', required, data-error='Please enter your first name')
-        .col-md-6
-          label Last Name
-          input.form-control#lname(type='text', name='text', required, data-error='Please enter your last name')
-        .col-md-6
-          label E-mail
-          input.form-control#email(type='email', name='email', required, data-error='Please enter your Email')
+section.register
+  .container
+    .row.justify-content-center
+      .col-md-10.col-lg-10.col-xs-12
+        h2.section-title Registration
+    .row.justify-content-center
+      .col-md-10.col-lg-10.col-xs-12.text-center
+        .services-item 
+          p Registration is open now, click the button below to get started!
+          button#register-expand.btn.btn-common(data-toggle="collapse", data-target="#register") Register Now! 
+    .collapse#register
+      form#register.section-padding
+        .row.justify-content-center
+          .col-md-10
+            label First Name
+            input.form-control#fname(type='text', name='text', required, data-error='Please enter your first name')
+        .row.justify-content-center
+          .col-md-10
+            label Last Name
+            input.form-control#lname(type='text', name='text', required, data-error='Please enter your last name')
+        .row.justify-content-center
+          .col-md-10
+            label E-mail
+            input.form-control#email(type='email', name='email', required, data-error='Please enter your Email')
           .help-block.with-errors
       input.form-group
-include footer
